@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ZipMPC: Compressed Context-Dependent MPC Cost via Imitation Learning">
+  <meta name="keywords" content="Imitation Learning, Model Predictive Control, Context-Dependent Control">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZipMPC</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">ZipMPC</h1>
+            <h3 class="title is-4">Compressed Context-Dependent MPC Cost via Imitation Learning</h3>
+            <div class="is-size-5 publication-authors">
+              <!--span class="author-block">Author names omitted for anonymous review</span-->
+              <a href="https://scholar.google.ch/citations?hl=de&user=4pRRiYIAAAAJ" target="_blank" rel="noopener noreferrer">
+                Rahel Rickenbach, 
+              </a>
+              <a href="https://scholar.google.ch/citations?hl=de&user=CUQbNfIAAAAJ" target="_blank" rel="noopener noreferrer">
+                Alan Lahoud, 
+              </a>
+              <a href="https://scholar.google.ch/citations?hl=de&user=ND_3IrkAAAAJ" target="_blank" rel="noopener noreferrer">
+                Erik Schaffernicht, 
+              </a>
+              <a href="https://scholar.google.ch/citations?hl=de&user=BSf9OLAAAAAJ" target="_blank" rel="noopener noreferrer">
+                Melanie N. Zeilinger 
+              </a>
+              <a href="https://scholar.google.ch/citations?hl=de&user=4HtJjKAAAAAJ" target="_blank" rel="noopener noreferrer">
+                Johannes A. Stork,  
+              </a>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>ArXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser"  style="margin-top: -3.0rem;">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="subtitle has-text-centered">
+          ZipMPC is a novel method that imitates a long-horizon MPC behaviour by learning a compressed and context-dependent cost function for a short-horizon MPC.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The computational burden of model predictive control (MPC) limits its application on real-time systems, such as robots, and often requires the use of short prediction horizons.
+              This not only affects the control performance, but also increases the difficulty of designing MPC cost functions that reflect the desired long-term objective.
+              ZipMPC presents a novel method that imitates a long-horizon MPC behaviour by learning a compressed and context-dependent cost function for a short-horizon MPC. It improves performance over alternative methods, such as approximate explicit MPC and automatic cost parameter tuning in terms of optimizing the long-term objective; maintaining computational costs comparable to a short-horizon MPC; ensuring constraint satisfaction; and generalizing control behaviour to environments not observed during training.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Explanatory Video</h2>
+           <!-- Text block with limited width -->
+          <div class="content" style="max-width: 950px; margin: 0 auto; text-align: left;">
+          </div>
+
+          <!-- Full-width video block -->
+          <div style="margin-top: 1.5rem;">
+            <video controls style="width: 100%;">
+              <source src="./static/ZipMPC_Videos/zipMPC_presentation.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Model Overview</h2>
+          <img src="./static/images_rahel/explanatory_figure.svg" alt="ZipMPC explained" style="width:100%">
+          <div class="content has-text-justified">
+            <p>
+              ZipMPC imitates long-horizon MPC behaviour by learning a compressed and context-dependent cost for a short-horizon MPC. It thereby combines the faster inference times of explicit MPC with the generalization and constraint recognition capabilities of automatic cost parameter tuning.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Results</h2>
+           <!-- Text block with limited width -->
+          <div class="content" style="max-width: 950px; margin: 0 auto; text-align: left;">
+            <p>
+              Applying ZipMPC on hardware, it can be seen how it incorporates the additional contextual information to improve racing performance in comparison to a standard MPC controller of identical horizon length and closely imitates the performance of a long horizon MPC.
+            </p>
+          </div>
+
+          <!-- Full-width video block -->
+          <div style="margin-top: 1.5rem;">
+            <video controls style="width: 49%;">
+              <source src="./static/ZipMPC_Videos/ZipMPC_real_world_1.mp4" type="video/mp4">
+            </video>
+            <video controls style="width: 49%;">
+              <source src="./static/ZipMPC_Videos/ZipMPC_real_world_2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+@article{zipmpc2025,
+  title={ZipMPC: Compressed Context-Dependent MPC Cost via Imitation Learning},
+  author={Anonymous},
+  journal={Under Review},
+  year={2025}
+}
+</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            Website adapted from <a href="https://nerfies.github.io">nerfies.github.io</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
